@@ -7,6 +7,56 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
         
+        <!-- Menu -->
+        <Label Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Content="Menu"
+               HorizontalContentAlignment="Center"
+               Background="AliceBlue"/>
+        
+        <!-- Config -->
+        <Label Grid.Row="1" Grid.Column="1"
+               Content="Config"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               Background="LightSkyBlue"/>
+        
+        <!-- Scores -->
+        <Grid Grid.Row="1" Grid.Column="0"
+              Background="LightBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Title -->
+            <Label Grid.Row="0"
+                   Content="Title"
+                   HorizontalContentAlignment="Center"
+                   Background="LightCyan"/>
+            
+            <!-- Scores -->
+            <Label Grid.Row="1"
+                   Content="Scores"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"/>
+            
+            <!-- Options -->
+            <Label Grid.Row="2"
+                   Content="Options"
+                   HorizontalContentAlignment="Center"
+                   Background="LightCyan"/>
+        </Grid>
     </Grid>
 </Window>
