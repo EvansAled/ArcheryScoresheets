@@ -3,9 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ArcheryScoresheetsUI"
+        xmlns:viewModels="clr-namespace:ScoresheetsLibrary.ViewModels;assembly=ScoresheetsLibrary"
+        d:DataContext="{d:DesignInstance viewModels:ScoresSession}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="800"
+        FontSize="11pt">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -25,12 +27,84 @@
                Background="AliceBlue"/>
         
         <!-- Config -->
-        <Label Grid.Row="1" Grid.Column="1"
-               Content="Config"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               Background="LightSkyBlue"/>
-        
+        <Grid Grid.Row="1" Grid.Column="1"
+              Background="LightSkyBlue">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title -->
+            <Label Grid.Row="0"
+                   HorizontalContentAlignment="Center"
+                   Content="Config Menu"/>
+
+            <!-- Distance -->
+            <Label Grid.Row="1"
+                   HorizontalContentAlignment="Left"
+                   Content="Distance in  meters"/>
+            
+            <TextBox Grid.Row="2" 
+                     Name="DistanceBox"/>
+
+            <!-- Arrows Per End -->
+            <Label Grid.Row="3"
+                   HorizontalContentAlignment="Left"
+                   Content="Number of arrows per end"/>
+
+            <TextBox Grid.Row="4"
+                     Name="ArrowsPerEndBox"/>
+
+            <!-- Scoring System -->
+            <Label Grid.Row="5"
+                   HorizontalContentAlignment="Left"
+                   Content="Scoring System"/>
+            
+            <ListBox Grid.Row="6" Name="ScoringSystemListBox"
+                 SelectionChanged="On_ScoringSystemChanged"
+                 SelectionMode="Single">
+                <ListBoxItem>Imperial</ListBoxItem>
+                <ListBoxItem>Metric</ListBoxItem>
+            </ListBox>
+
+            <!-- Face Size -->
+            <Label Grid.Row="7"
+                   HorizontalContentAlignment="Left"
+                   Content="Distance"/>
+            
+            <ListBox Grid.Row="8" Name="FaceSizeListBox"
+                 SelectionChanged="On_FaceSizeChanged"
+                 SelectionMode="Single">
+                <ListBoxItem>Extra Small - 40cm</ListBoxItem>
+                <ListBoxItem>Small - 60cm</ListBoxItem>
+                <ListBoxItem>Medium - 80cm</ListBoxItem>
+                <ListBoxItem>Standard - 122cm</ListBoxItem>
+            </ListBox>
+
+            <!-- Place -->
+            <Label Grid.Row="9"
+                   HorizontalContentAlignment="Left"
+                   Content="Distance"/>
+            
+            <ListBox Grid.Row="10" Name="PlaceListBox"
+                 SelectionChanged="On_PlaceChanged"
+                 SelectionMode="Single">
+                <ListBoxItem>Indoors</ListBoxItem>
+                <ListBoxItem>Outdoors</ListBoxItem>
+            </ListBox>
+            
+        </Grid>
+
         <!-- Scores -->
         <Grid Grid.Row="1" Grid.Column="0"
               Background="LightBlue">

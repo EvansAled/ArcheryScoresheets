@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScoresheetsLibrary\ScoresheetsLibrary.csproj">
+      <Project>{b69f77d0-bf3a-4abf-a75b-e9ea5b61b79e}</Project>
+      <Name>ScoresheetsLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

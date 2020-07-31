@@ -1,0 +1,16 @@
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\bin\Debug\ArcheryScoresheetsUI.exe.config
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\bin\Debug\ArcheryScoresheetsUI.exe
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\bin\Debug\ArcheryScoresheetsUI.pdb
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\bin\Debug\ScoresheetsLibrary.dll
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\bin\Debug\ScoresheetsLibrary.pdb
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\ArcheryScoresheetsUI.csprojAssemblyReference.cache
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\MainWindow.baml
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\MainWindow.g.cs
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\App.g.cs
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\ArcheryScoresheetsUI_MarkupCompile.cache
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\ArcheryScoresheetsUI.g.resources
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\ArcheryScoresheetsUI.Properties.Resources.resources
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\ArcheryScoresheetsUI.csproj.GenerateResource.cache
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\ArcheryScoresheetsUI.csproj.CopyComplete
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\ArcheryScoresheetsUI.exe
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ArcheryScoresheetsUI\obj\Debug\ArcheryScoresheetsUI.pdb

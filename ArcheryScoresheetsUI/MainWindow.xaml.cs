@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ScoresheetsLibrary.ViewModels;
 
 namespace ArcheryScoresheetsUI
 {
@@ -20,9 +21,28 @@ namespace ArcheryScoresheetsUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ScoresSession _scoresSession;
+
         public MainWindow()
         {
             InitializeComponent();
+            _scoresSession = new ScoresSession();
+            DataContext = _scoresSession;
+        }
+
+        private void On_ScoringSystemChanged(object sender, SelectionChangedEventArgs e)
+        {
+            return;
+        }
+
+        private void On_FaceSizeChanged(object sender, SelectionChangedEventArgs e)
+        {
+            return;
+        }
+
+        private void On_PlaceChanged(object sender, SelectionChangedEventArgs e)
+        {
+            return;
         }
     }
 }
