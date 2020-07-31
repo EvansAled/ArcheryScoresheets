@@ -1,0 +1,8 @@
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ScoresheetsLibrary\bin\Debug\netstandard2.0\ScoresheetsLibrary.deps.json
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ScoresheetsLibrary\bin\Debug\netstandard2.0\ScoresheetsLibrary.dll
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ScoresheetsLibrary\bin\Debug\netstandard2.0\ScoresheetsLibrary.pdb
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ScoresheetsLibrary\obj\Debug\netstandard2.0\ScoresheetsLibrary.csprojAssemblyReference.cache
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ScoresheetsLibrary\obj\Debug\netstandard2.0\ScoresheetsLibrary.AssemblyInfoInputs.cache
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ScoresheetsLibrary\obj\Debug\netstandard2.0\ScoresheetsLibrary.AssemblyInfo.cs
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ScoresheetsLibrary\obj\Debug\netstandard2.0\ScoresheetsLibrary.dll
+C:\Users\Gareth\Desktop\C# Projects\ArcheryScoresheets\ScoresheetsLibrary\obj\Debug\netstandard2.0\ScoresheetsLibrary.pdb
