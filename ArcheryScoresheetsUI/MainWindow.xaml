@@ -6,7 +6,7 @@
         xmlns:viewModels="clr-namespace:ScoresheetsLibrary.ViewModels;assembly=ScoresheetsLibrary"
         d:DataContext="{d:DesignInstance viewModels:ScoresSession}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800"
+        Title="MainWindow" Height="568" Width="800"
         FontSize="11pt">
     <Grid>
         <Grid.RowDefinitions>
@@ -42,20 +42,25 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <!-- Title -->
             <Label Grid.Row="0"
                    HorizontalContentAlignment="Center"
-                   Content="Config Menu"/>
+                   Content="Config Menu"
+                   Margin="0,0,0,5"/>
 
             <!-- Distance -->
             <Label Grid.Row="1"
                    HorizontalContentAlignment="Left"
-                   Content="Distance in  meters"/>
+                   Content="Distance in metres"/>
             
             <TextBox Grid.Row="2" 
-                     Name="DistanceBox"/>
+                     Name="DistanceBox"
+                     Margin="0,0,0,5"
+                     LostFocus="On_DistanceBoxLostFocus"/>
 
             <!-- Arrows Per End -->
             <Label Grid.Row="3"
@@ -63,40 +68,54 @@
                    Content="Number of arrows per end"/>
 
             <TextBox Grid.Row="4"
-                     Name="ArrowsPerEndBox"/>
+                     Name="ArrowsPerEndBox"
+                     Margin="0,0,0,5"
+                     LostFocus="On_ArrowsPerEndBoxLostFocus"/>
+
+            <!-- Number of ends -->
+            <Label Grid.Row="5"
+                   HorizontalContentAlignment="Left"
+                   Content="Number of ends"/>
+
+            <TextBox Grid.Row="6"
+                     Name="NumberOfEndsBox"
+                     Margin="0,0,0,5"
+                     LostFocus="On_NumberOfEndsBoxLostFocus"/>
 
             <!-- Scoring System -->
-            <Label Grid.Row="5"
+            <Label Grid.Row="7"
                    HorizontalContentAlignment="Left"
                    Content="Scoring System"/>
             
-            <ListBox Grid.Row="6" Name="ScoringSystemListBox"
-                 SelectionChanged="On_ScoringSystemChanged"
-                 SelectionMode="Single">
+            <ListBox Grid.Row="8" Name="ScoringSystemListBox"
+                     SelectionChanged="On_ScoringSystemChanged"
+                     SelectionMode="Single"
+                     Margin="0,0,0,5">
                 <ListBoxItem>Imperial</ListBoxItem>
                 <ListBoxItem>Metric</ListBoxItem>
             </ListBox>
 
             <!-- Face Size -->
-            <Label Grid.Row="7"
+            <Label Grid.Row="9"
                    HorizontalContentAlignment="Left"
-                   Content="Distance"/>
+                   Content="Face Size"/>
             
-            <ListBox Grid.Row="8" Name="FaceSizeListBox"
-                 SelectionChanged="On_FaceSizeChanged"
-                 SelectionMode="Single">
-                <ListBoxItem>Extra Small - 40cm</ListBoxItem>
-                <ListBoxItem>Small - 60cm</ListBoxItem>
-                <ListBoxItem>Medium - 80cm</ListBoxItem>
-                <ListBoxItem>Standard - 122cm</ListBoxItem>
+            <ListBox Grid.Row="10" Name="FaceSizeListBox"
+                     SelectionChanged="On_FaceSizeChanged"
+                     SelectionMode="Single"
+                     Margin="0,0,0,5">
+                <ListBoxItem>40cm</ListBoxItem>
+                <ListBoxItem>60cm</ListBoxItem>
+                <ListBoxItem>80cm</ListBoxItem>
+                <ListBoxItem>122cm</ListBoxItem>
             </ListBox>
 
             <!-- Place -->
-            <Label Grid.Row="9"
+            <Label Grid.Row="11"
                    HorizontalContentAlignment="Left"
-                   Content="Distance"/>
+                   Content="Place"/>
             
-            <ListBox Grid.Row="10" Name="PlaceListBox"
+            <ListBox Grid.Row="12" Name="PlaceListBox"
                  SelectionChanged="On_PlaceChanged"
                  SelectionMode="Single">
                 <ListBoxItem>Indoors</ListBoxItem>

@@ -22,17 +22,20 @@
             Outdoors
         }
 
-        public int Distance { get; private set; }
-        public int ArrowsPerEnd { get; private set; }
-        public ScoringSystems ScoringSystem { get; private set; }
-        public FaceSizes FaceSize { get; private set; }
-        public Places Place { get; private set; }
+        public int Distance { get; internal set; }
+        public int ArrowsPerEnd { get; internal set; }
+        public int NumberOfEnds { get; internal set; }
+        public ScoringSystems ScoringSystem { get; internal set; }
+        public FaceSizes FaceSize { get; internal set; }
+        public Places Place { get; internal set; }
 
-        public Config(int distance = 30, int arrowsPerEnd = 6, ScoringSystems scoringSystem = ScoringSystems.Imperial, 
+        public Config(int distance = 30, int arrowsPerEnd = 6, int numberOfEnds = 6,
+                      ScoringSystems scoringSystem = ScoringSystems.Imperial, 
                       FaceSizes faceSize = FaceSizes.Standard, Places place = Places.Outdoors)
         {
             Distance = distance;
             ArrowsPerEnd = arrowsPerEnd;
+            NumberOfEnds = numberOfEnds;
             ScoringSystem = scoringSystem;
             FaceSize = faceSize;
             Place = place;
