@@ -1,18 +1,33 @@
 ﻿using System;
 using ScoresheetsLibrary.Models;
-using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel;
+using System.Collections.ObjectModel;
+using System.Runtime.CompilerServices;
 
 namespace ScoresheetsLibrary.ViewModels
 {
-    public class ScoresSession
+    public class ScoresSession : INotifyPropertyChanged
     {
-        public List<Entry> CurrentEntries { get; private set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public ObservableCollection<Entry> CurrentEntries { get; private set; }
+        private Entry _currentEntry;
         public Config CurrentConfig { get; private set; }
+
+        public Entry CurrentEntry
+        {
+            get => _currentEntry;
+            set
+            {
+                _currentEntry = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ScoresSession()
         {
-            CurrentEntries = new List<Entry>();
+            CurrentEntries = new ObservableCollection<Entry>();
+            CurrentEntry = null;
             CurrentConfig = new Config();
             NewEntry("testOne");
         }
@@ -83,10 +98,25 @@ namespace ScoresheetsLibrary.ViewModels
             }
         }
 
+        public void ChangeCurrentEntry(object entry)
+        {
+            CurrentEntry = (Entry)entry;
+        }
+
         public void NewEntry(string entryName)
         {
             CurrentEntries.Add(new Entry(entryName,
                                          CurrentConfig));
+        }
+
+        public void RemoveEntry(Entry entryToRemove)
+        {
+            CurrentEntries.Remove(entryToRemove);
+        }
+
+        private void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
