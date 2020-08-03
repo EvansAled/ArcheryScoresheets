@@ -116,15 +116,15 @@
                    Content="Place"/>
             
             <ListBox Grid.Row="12" Name="PlaceListBox"
-                 SelectionChanged="On_PlaceChanged"
-                 SelectionMode="Single">
+                     SelectionChanged="On_PlaceChanged"
+                     SelectionMode="Single">
                 <ListBoxItem>Indoors</ListBoxItem>
                 <ListBoxItem>Outdoors</ListBoxItem>
             </ListBox>
             
         </Grid>
 
-        <!-- Scores -->
+        <!-- Entries, Title, and Options -->
         <Grid Grid.Row="1" Grid.Column="0"
               Background="LightBlue">
             <Grid.RowDefinitions>
@@ -135,21 +135,71 @@
             
             <!-- Title -->
             <Label Grid.Row="0"
+                   Name="CurrentEntry"
                    Content="Title"
                    HorizontalContentAlignment="Center"
                    Background="LightCyan"/>
             
-            <!-- Scores -->
-            <Label Grid.Row="1"
-                   Content="Scores"
-                   HorizontalContentAlignment="Center"
-                   VerticalContentAlignment="Center"/>
+            <!-- Entries -->
+            <DataGrid Grid.Row="1" Name="EntriesDataGrid"
+                      ItemsSource="{Binding CurrentEntries}"
+                      AutoGenerateColumns="False"
+                      HeadersVisibility="Column"
+                      SelectionMode="Single"
+                      SelectionChanged="On_EntryChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name"
+                                        Binding="{Binding EntryName, Mode=OneWay}"
+                                        IsReadOnly="True"
+                                        Width="*"/>
+                    <DataGridTextColumn Header="Total"
+                                        Binding="{Binding Total, Mode=OneWay}"
+                                        IsReadOnly="True"
+                                        Width="Auto"/>
+                    <DataGridTextColumn Header="Golds"
+                                        Binding="{Binding TotalGolds, Mode=OneWay}"
+                                        IsReadOnly="True"
+                                        Width="Auto"/>
+                </DataGrid.Columns>
+            </DataGrid>
             
             <!-- Options -->
-            <Label Grid.Row="2"
-                   Content="Options"
-                   HorizontalContentAlignment="Center"
-                   Background="LightCyan"/>
+            <Grid Grid.Row="2" Background="LightCyan">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Selected Entry -->
+                <Label Grid.Column="0"
+                   Content="{Binding CurrentEntry.EntryName}"
+                   HorizontalContentAlignment="Left"/>
+                
+                <!-- Options -->
+                <Grid Grid.Column="1"
+                      HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            Content="Add"
+                            Click="OnClick_AddEntry"
+                            Margin="10,0,5,0"/>
+                    
+                    <Button Grid.Column="1"
+                            Content="Edit"
+                            Click="OnClick_EditEntry"
+                            Margin="5,0,5,0"/>
+                    
+                    <Button Grid.Column="2"
+                            Content="Delete"
+                            Click="OnClick_DeleteEntry"
+                            Margin="5,0,10,0"/>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

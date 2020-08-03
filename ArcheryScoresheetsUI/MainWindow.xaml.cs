@@ -27,6 +27,9 @@ namespace ArcheryScoresheetsUI
             _scoresSession = new ScoresSession();
             DataContext = _scoresSession;
         }
+
+        #region Config
+
         private void On_DistanceBoxLostFocus(object sender, RoutedEventArgs e)
         {
             int distance;
@@ -81,5 +84,43 @@ namespace ArcheryScoresheetsUI
             _scoresSession.ChangePlace(selectedItem);
         }
 
+        #endregion
+
+        #region Entries
+
+        private void On_EntryChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedEntry = (sender as DataGrid).SelectedItem;
+
+            _scoresSession.ChangeCurrentEntry(selectedEntry);
+        }
+
+        #endregion
+
+        #region Options
+
+        private void OnClick_AddEntry(object sender, RoutedEventArgs e)
+        {
+            _scoresSession.NewEntry("NewEntry");
+        }
+
+        private void OnClick_EditEntry(object sender, RoutedEventArgs e)
+        {
+            if (_scoresSession.CurrentEntry != null)
+            {
+                //TODO: Pop-up winodw to edit CurrentEntry
+            }
+        }
+
+        private void OnClick_DeleteEntry(object sender, RoutedEventArgs e)
+        {
+            if(_scoresSession.CurrentEntry != null)
+            {
+                // Have a confirmation window
+                _scoresSession.RemoveEntry(_scoresSession.CurrentEntry);
+            }
+        }
+
+        #endregion
     }
 }
